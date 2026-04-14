@@ -99,10 +99,10 @@ puesdotime_cluster_plot<-plot_cells(cds,
            graph_label_size=1.5) 
 puesdotime_cluster_plot + ggtitle("puesdotime_cluster_plot")
 
-
-#root_cells_2 <- colnames(cds_p125)[cds_p125$seurat_clusters == "0"]
+#Must use different root, since this is a subset group. Use next "best" epithelial
 root_cells_2 <- colnames(cds_p125)[cds_p125$seurat_clusters == "5"]
 cds_p125 <- order_cells(cds_p125, root_cells = root_cells_2)
+
 
 root_graph_plot_2<-plot_cells(cds_p125,graph_label_size=1.5, label_cell_groups =TRUE)
 root_graph_plot_2+ ggtitle("root_graph_plot_2")
