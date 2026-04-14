@@ -1,0 +1,28 @@
+Bootstrap: docker
+From: rocker/r-devel
+
+%labels
+    Maintainer Ainslie
+    Purpose "R 4.5 + current SingleR"
+
+%post
+    apt-get update && apt-get install -y \
+        build-essential gfortran cmake git \
+        libxml2-dev libcurl4-openssl-dev libssl-dev \
+        libpng-dev libjpeg-dev libtiff-dev \
+        zlib1g-dev libbz2-dev liblzma-dev libpcre2-dev \
+        libv8-dev
+
+    R -e 'options(repos = c(CRAN = "https://cran.rstudio.com"))'
+    R -e 'if (!require("BiocManager", quietly = TRUE)) install.packages("BiocManager")'
+    R -e 'BiocManager::install(version = "3.22", ask = FALSE)'
+    R -e 'install.packages("Seurat")'
+    R -e 'BiocManager::install(c("SingleCellExperiment", "SingleR", "celldex"), ask = FALSE)'
+
+%files
+    /courses/BINF7700.202630/students/forbes.ai/SingleR/subset_reclustered_relaxed.rds /data/subset_reclustered_relaxed.rds
+    /courses/BINF7700.202630/students/forbes.ai/SingleR/subset_reclustered_stricter.rds /data/subset_reclustered_stricter.rds
+
+%environment
+    export LC_ALL=C
+    export LANG=C
