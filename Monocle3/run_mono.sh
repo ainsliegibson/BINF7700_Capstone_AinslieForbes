@@ -13,7 +13,7 @@
 # Automated setup script for Seurat analysis environment
 
 # Step 1: Create conda environment from YAML specification
-conda env create --name monocle3 -f ../_config/config/monocle3_env.yml
+conda env create --name monocle3 -f ./config/monocle3_env.yml
 
 # Step 2: Activate the seurat conda environment
 eval "$(conda shell.bash hook)"
