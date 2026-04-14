@@ -22,4 +22,5 @@ conda activate monocle3
 # Step 3: Restore R packages from renv lockfile
 #Rscript -e "renv::restore(lockfile = 'config/renv.lock', prompt = FALSE)"
 
-Rscript /home/forbes.ai/capstone_dir/Monocle3/mono_full.R
+Rscript ~/BINF7700_Capstone_AinslieForbes/Monocle3/mono_stricter.R
+Rscript ~/BINF7700_Capstone_AinslieForbes/Monocle3/mono_stricter.R
