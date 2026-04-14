@@ -53,7 +53,7 @@ part_cluster_plot_2<-plot_cells(cds_p23, color_cells_by = "partition",
 part_cluster_plot_2 + ggtitle("part_cluster_plot_23")
 
 
-part_cluster_plot_3<-plot_cells(cds_p125, color_cells_by = "partition",
+part_cluster_plot_3<-plot_cells(cds_p123, color_cells_by = "partition",
            graph_label_size=1.5, label_cell_groups =FALSE)
 part_cluster_plot_3 + ggtitle("part_cluster_plot_123")
 
