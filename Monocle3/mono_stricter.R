@@ -33,7 +33,8 @@ seurat_cluster_plot + ggtitle("seurat_cluster_plot")
 part_cluster_plot<-plot_cells(cds, color_cells_by = "partition",
            graph_label_size=1.5, label_cell_groups =FALSE)
 part_cluster_plot + ggtitle("part_cluster_plot")
-#partiton 3 & 2 + 1, 2 & 5
+
+#partiton 3 & 2 + 1, 2 & 3
 
 cds_p23 <- cds[, partitions(cds) %in% c("2", "3")]
 cds_p23 <-preprocess_cds(cds_p23, num_dim = 50)
@@ -99,7 +100,7 @@ puesdotime_cluster_plot<-plot_cells(cds,
            graph_label_size=1.5) 
 puesdotime_cluster_plot + ggtitle("puesdotime_cluster_plot")
 
-
+#can use same root
 root_cells_2 <- colnames(cds_p23)[cds_p23$seurat_clusters == "0"]
 cds_p23 <- order_cells(cds_p23, root_cells = root_cells_2)
 
