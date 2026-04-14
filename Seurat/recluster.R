@@ -7,8 +7,7 @@ path_to_f<-"~/capstone_dir/axo_data/seurat_files/all_umap.rds"
 obj <- readRDS(path_to_f)
 obj
 
-# Make sure identities are set to your existing clusters
-# If already set, you can skip the next line.
+#Name of clusters
 Idents(obj) <- "seurat_clusters"
 
 #Cells of interst based on UMAP from Edha UMAP
