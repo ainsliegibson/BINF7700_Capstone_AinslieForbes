@@ -1,6 +1,8 @@
 # BINF7700\_Capstone\_AinslieForbes
 
-Main repo for capstone work
+Main repo for capstone work 
+
+*Note: This repo is under constrcution*
 
 **PROJECT**
 
