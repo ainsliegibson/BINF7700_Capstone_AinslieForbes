@@ -6,7 +6,7 @@ library(SingleR)
 library(celldex)
 
 #pick one of the subset files
-#path_f<-"/data/subset_reclustered_relaxed.rds"
+#path_f<-"/data/subset_reclustered_stricter.rds"
 path_f<-"/data/subset_reclustered_relaxed.rds"
 
 sub_obj<-readRDS(path_f)
