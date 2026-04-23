@@ -2,8 +2,6 @@
 
 Main repo for capstone work 
 
-*Note: This repo is under constrcution*
-
 **PROJECT**
 
 Redefining the Relationship Between EMT, MET AND Fibroblasts in Axolotl Wound Healing
